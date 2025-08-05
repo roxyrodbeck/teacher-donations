@@ -14,5 +14,19 @@
                 Your donation helps {{ $teacherName }} provide better resources for students.</p>
 
                 <!-- PayPal Donate Button -->
+                 <form action="https://www.paypal.com/donate" method="post" target="_blank" class="mb-4">
+                    <input type="hidden" name="business" value="{{ $paypalEmail }}">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="item_name" value="Donation for {{ $teacherName }}">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                        Donate via PayPal
+                 </button>
+                 </form>
+
+                 <!-- Amazon Wishlist  -->
+                  <a href="{{ $wishlistUrl }}" target="_blank" class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">
+                    View Amazon Wishlist
+                 </a>
+                 </div>
 </body>
 </html>
